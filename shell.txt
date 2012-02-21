@@ -1,0 +1,19 @@
+
+CentOS (RedHat)
+
+### Configuration after initial installation ###
+
+sudo yum -y update
+
+setenforce 0
+
+
+
+
+### awk script | pipe to grep to ignore anything contains "BOT" case insensitive ###
+
+awk -F\" '{print $6}' | grep -iv bot 
+
+
+
+
