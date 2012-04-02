@@ -1,4 +1,3 @@
-
 CentOS (RedHat)
 
 ### Configuration after initial installation ###
@@ -7,8 +6,16 @@ sudo yum -y update
 
 setenforce 0
 
+### Cent OS ###
 
+//Adjust time
 
+>su yum install ntp
+>sudo chkconfig ntpd on
+>ntpdate 129.6.15.28  (pool.ntp.org)
+
+//SSH enable
+>sudo /sbin/service sshd restart
 
 ### awk script | pipe to grep to ignore anything contains "BOT" case insensitive ###
 
