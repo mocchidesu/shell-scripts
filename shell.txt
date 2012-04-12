@@ -17,10 +17,16 @@ setenforce 0
 //SSH enable
 >sudo /sbin/service sshd restart
 
+####################
+#  TEXT FILE / IO  #
+####################
+
 ### awk script | pipe to grep to ignore anything contains "BOT" case insensitive ###
 
-awk -F\" '{print $6}' | grep -iv bot 
+> awk -F\" '{print $6}' | grep -iv bot 
 
+### Grep result and show in multiple lines.
 
+> grep -n "xxxxxx" FILE
 
 
