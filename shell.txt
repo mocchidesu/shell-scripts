@@ -22,11 +22,10 @@ setenforce 0
 ####################
 
 ### awk script | pipe to grep to ignore anything contains "BOT" case insensitive ###
-
 > awk -F\" '{print $6}' | grep -iv bot 
 
 ### Grep result and show in multiple lines.
-
 > grep -n "xxxxxx" FILE
 
-
+### Sample audit.log から<response>330</response> を含む行の前１行を含むアウトプットをとり、結果をパイプして<orderId>USERNUM_X</orderId> のUsernumを取り出す
+> grep -B 1 "response>330" tako.txt | grep orderId | sed -e "s/.*<orderId>//" | sed -e "s/_.*//g"
