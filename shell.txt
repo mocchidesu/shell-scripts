@@ -2,11 +2,17 @@ CentOS (RedHat)
 
 ### Configuration after initial installation ###
 
-sudo yum -y update
+> sudo yum -y update
 
-setenforce 0
+> setenforce 0  #Disable iptables
 
-### Cent OS ###
+> useradd hidetomo # Add user
+> passwd hidetomo
+> usermod -G wheel hidetomo # Add user(hidetomo) to wheel group
+> visudo  # Allows wheel group user to run all commands
+
+
+### Cent OS TIPS ###
 
 //Adjust time
 
